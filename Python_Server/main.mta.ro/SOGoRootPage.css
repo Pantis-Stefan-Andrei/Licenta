@@ -1,0 +1,106 @@
+BODY
+{ background-color: #E6E7E6;
+  }
+
+IMG#preparedAnimation
+{ width: 0px;
+  height: 0px; }
+
+A,
+A:link,
+A:visited
+{ color: #54b948; }
+
+DIV A.button
+{ color: #000; }
+
+DIV#loginScreen
+{ clear: both;
+  margin: 0px auto;
+  padding-top: 5em;
+  width: 600px;
+}
+
+DIV#loginScreen #loginCell
+{ width: 250px;
+  float: right;
+}
+
+DIV#loginScreen LABEL
+{ display: block;
+  padding: 5px 0px;
+  margin: 5px 0px 0px;
+  color: #666;
+  font-size: 1.1em 
+  }
+
+#animation
+{ margin: 0px auto;
+  padding: 0px; }
+
+IMG#splash
+{ border: 0;
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+  float: left;  }
+
+DIV#loginScreen INPUT.textField,
+DIV#loginScreen select
+{  
+  margin: 3px 0px;
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 2px;
+  color: #666666;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 8px 2.5%;
+  width: 95%
+}
+DIV#loginScreen select{
+  width: 100%;
+}
+
+DIV#loginScreen A#submit
+{ background-color: #69be28;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size:1.5em;
+  margin-top: 10px;
+  color: white;
+  transition: background-color 0.2s;
+  border-radius: 3px;
+   }
+   DIV#loginScreen A#submit:hover{
+    background-color: #46962D;
+    transition: background-color 0.2s;
+    text-decoration: none;
+   }
+
+IMG#progressIndicator
+{ width: 16px;
+  height: 16px;
+  margin-top: 20px;
+  margin-left: 5px; }
+
+#errorMessage
+{ color: #ff7900;
+  font-size: 1.2em;}
+
+P.browser
+{ background-color: #fff;
+  border-top: 1px solid #888;
+  border-left: 1px solid #888;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  line-height: 32px;
+  padding-right: 5px; }
+
+P.browser IMG
+{ padding: 0 2px;
+  margin: 0;
+  vertical-align: middle; }
+
+#passwordChangeDialog INPUT
+{ width: 150px; }

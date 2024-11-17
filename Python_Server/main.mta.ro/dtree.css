@@ -1,0 +1,68 @@
+/*--------------------------------------------------|
+| dTree 2.05 | www.destroydrop.com/javascript/tree/ |
+|---------------------------------------------------|
+| Copyright (c) 2002-2003 Geir Landrö               |
+|--------------------------------------------------*/
+
+.dtree
+{
+  color: #000;
+  white-space: nowrap;
+}
+
+.dtree img
+{
+  vertical-align: middle;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.dtree a
+{
+  cursor: default;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 30px;
+  vertical-align: top;
+  height: 30px;
+}
+
+.dtree a.node{
+  white-space: nowrap;
+  padding: 0px 5px 0px 0px;
+  font-size: 1.1em;
+  display: inline-block;
+}
+
+.dtree a.node img{
+margin-left: 3px;
+float: left;
+margin-top: 1px;
+}
+
+.dtree a.node .nodeName{
+  height: 30px;
+  line-height: 30px;
+  margin-left: 5px;
+}
+
+.dtree a.node:hover{
+  text-decoration: none;
+  background-color: #e3e3e3;
+  cursor: pointer;
+}
+
+.dtree a.node._selected
+{ background-color: #ccc; }
+
+.dtree .clip
+{
+  overflow: hidden;
+}
+
+.dTreeNode
+{ height: 30px; }
+
+
